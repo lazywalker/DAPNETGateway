@@ -196,7 +196,7 @@ int CDAPNETGateway::run()
 		displayLevel = 0U;
 #endif
 
-	ret = ::LogInitialise(m_conf.getLogFilePath(), m_conf.getLogFileRoot(), m_conf.getLogFileLevel(), displayLevel);
+	ret = ::LogInitialise(m_conf.getLogFilePath(), m_conf.getLogFileRoot(), m_conf.getLogFileLevel(), displayLevel, m_conf.getLogUTC());
 	if (!ret) {
 		::fprintf(stderr, "DAPNETGateway: unable to open the log file\n");
 		return 1;

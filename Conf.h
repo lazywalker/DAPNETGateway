@@ -47,6 +47,7 @@ public:
   unsigned int getLogFileLevel() const;
   std::string  getLogFilePath() const;
   std::string  getLogFileRoot() const;
+  bool         getLogUTC() const;
 
   // The DAPNET section
   std::string  getDAPNETAddress() const;
@@ -73,6 +74,7 @@ private:
   unsigned int m_logFileLevel;
   std::string  m_logFilePath;
   std::string  m_logFileRoot;
+  bool         m_logUTC;
 
   std::string  m_dapnetAddress;
   unsigned int m_dapnetPort;
